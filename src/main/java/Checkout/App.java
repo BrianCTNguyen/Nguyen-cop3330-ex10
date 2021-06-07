@@ -42,6 +42,31 @@ public class App {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        
+        System.out.print("Enter the price of item 1: ");
+        double price1 = in.nextDouble();
+
+        System.out.print("Enter the quantity of item 1: ");
+        int qty1 = in.nextInt();
+
+        System.out.print("Enter the price of item 2: ");
+        double price2 = in.nextDouble();
+
+        System.out.print("Enter the quantity of item 2: ");
+        int qty2 = in.nextInt();
+
+        System.out.print("Enter the price of item 3: ");
+        double price3 = in.nextDouble();
+
+        System.out.print("Enter the quantity of item 3: ");
+        int qty3 = in.nextInt();
+
+        double subTotal = (price1*qty1) + (price2*qty2) + (price3*qty3);
+        double tax = (subTotal*5.5)/100; //calculate tax
+        double total = subTotal+tax;
+
+
+        System.out.println("Subtotal: $" +subTotal);
+        System.out.println("Tax: $" +tax);
+        System.out.println("Total: $" +total);
     }
 }
